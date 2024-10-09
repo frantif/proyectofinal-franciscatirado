@@ -1,0 +1,160 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+/*estilos header*/
+header {
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  color: rgb(105, 104, 103);
+}
+header .boton-logo {
+  padding: 0.3rem;
+}
+header nav ul li {
+  display: inline-block;
+  padding: 0.4rem;
+}
+header nav ul li a {
+  color: #DF9527;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+main {
+  display: grid;
+  font-family: "Poppins", sans-serif;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat 3, 1fr;
+}
+main .menu-principal {
+  display: flex;
+  text-decoration: none;
+  row-gap: 1 rem;
+}
+main .menu-uno {
+  text-align: center;
+}
+main .menu-uno img {
+  width: 100%;
+}
+main .menu-uno h1 {
+  padding-top: 0.5rem;
+}
+main .menu-uno h1 span {
+  display: block;
+}
+main .menu-uno p {
+  padding: 1rem;
+}
+main .menu-uno .boton-index {
+  display: inline-block;
+  background-color: #DF9527;
+  padding: 0.8rem;
+  text-align: center;
+  width: 50%;
+  margin: 1rem;
+  border-radius: 15px;
+}
+main .menu-uno .boton-index a {
+  text-decoration: none;
+  color: aliceblue;
+}
+main .menu-dos {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+  text-align: center;
+}
+main .menu-dos img {
+  width: 70%;
+  margin: 2rem;
+  align-items: center;
+}
+main .menu-dos p {
+  padding: 0.5rem;
+  text-align: center;
+}
+main .menu-dos a {
+  text-decoration: none;
+  background-color: rgb(157, 156, 156);
+  color: antiquewhite;
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  main .menu-uno {
+    text-align: center;
+  }
+  main .menu-uno .boton-index {
+    width: 30%;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+  main .menu-dos {
+    display: grid;
+    font-family: "Poppins", sans-serif;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1, 40%);
+    padding: 6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .menu-uno {
+    display: inline-block;
+  }
+  main .menu-uno .boton-index {
+    width: 20%;
+    margin-bottom: 7rem;
+  }
+  main .menu-dos {
+    display: grid;
+    font-family: "Poppins", sans-serif;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1, 40%);
+  }
+}
+
+footer {
+  background-color: orange;
+  color: aliceblue;
+  padding: 15px;
+  display: grid;
+  justify-content: center;
+}
+footer a img {
+  height: 25px;
+  width: 25px;
+  justify-content: center;
+  display: flex;
+}
+footer p {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  footer img {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .menu-mapa {
+    padding: auto;
+    margin: auto;
+    text-align: right;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

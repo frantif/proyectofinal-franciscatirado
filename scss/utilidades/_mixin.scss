@@ -1,0 +1,12 @@
+
+
+@mixin grid{
+    display: grid;
+    font-family:  "Poppins", sans-serif;
+
+}
+
+@mixin flex{
+    display: flex;
+    flex-wrap: wrap;
+}

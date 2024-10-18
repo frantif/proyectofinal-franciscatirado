@@ -10,3 +10,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+@mixin titulos{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-align: center;
+}

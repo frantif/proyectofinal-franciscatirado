@@ -3,29 +3,37 @@
 @import "../utilidades/mixin";
 
 
+
 /*estilos header*/
 
 header{
     @include flex;
     position: sticky;
-    color: nth($list-color, 3 );
+    color: rgb(105, 104, 103);
     .boton-logo{
-        padding: 0.3rem;
+        margin: 0.5rem;
+    }
+    .menu-cabeza{
+        margin-bottom: 0.3rem;
+        margin-top: 0.3rem;
     }
     nav{
         ul{
             li{ 
                 display: inline-block;
-                padding: 0.4rem;
+                padding: 0.7rem;
                 a{
-                    color:nth($list-color, 1 );
+                    color:orange;
                     text-decoration: none;
-                    letter-spacing: 1px;
+                    letter-spacing: 0.2rem;
+                    
                 }
             }
         }
     }
 }
+
+/*estilos home mobile*/
 
 main{
     @include grid;
@@ -41,30 +49,36 @@ main{
         img{
             width: 100%;
         }
-    
+    }
     h1{
-        padding-top: 0.5rem;
+        @include titulos;
+        padding: 1rem;
         span{
             display: block;
         }
-     }
-     p{
-        padding: 1rem;
-     }
+    }
+    p{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
     .boton-index{
         display: inline-block;
-        background-color: #DF9527;
+        background-color:orange;
         padding: 0.8rem;
         text-align: center;
         width: 50%;
         margin: 1rem;
         border-radius: 15px;
+        &:hover {
+            background-color: rgb(236, 122, 46);
+        } 
         a{
             text-decoration: none;
-            color:nth($list-color, 2 );
+            color:aliceblue;
         }
     }
-    }
+
+
 
     .menu-dos{
         flex-direction: column;
@@ -72,14 +86,22 @@ main{
         justify-content: center;
         row-gap: 1rem;
         text-align: center;
+        margin-top: 1rem;
         img{
             width: 70%;
             margin: 2rem;
             align-items: center;
+            border-radius: 10px;
+        }
+        h2{
+            @include titulos;
         }
         p{
-            padding: 0.5rem;
+            margin: 1.2rem;
             text-align: center;
+            span{
+                display: block;
+            }
         }
         a{
         text-decoration: none;
@@ -92,66 +114,417 @@ main{
         }
     }
 
+
+  /*estilos agenda mobile*/
+
+  .item-agenda{
+    @include flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        display: inline-block;
+        @include titulos;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    img{
+        width:100%;
+        margin-bottom: 1.5rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        
+    }
+    .boton-hora{
+        background-color: orange;
+        padding: 15px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        display: inline-block;
+        border-radius: 15px;
+        justify-content: center;
+        a{
+            color: aliceblue;
+            text-decoration: none;
+        }
+        &:hover {
+            background-color: rgb(236, 122, 46);
+         } 
+    }
+    h2{
+        @include titulos;
+        text-align: center;
+    }
+    p{
+        text-align: left;
+        margin: 1rem;
+        span{ 
+            display: block;
+            text-align: left;
+            font-weight: bold;
+        }
+    }
+    
+    }
+
+  /*estilos quien somos mobile*/
+
+  .titulo-somos{
+        @include titulos;
+        margin: 2rem;
+    }
+
+  .contenedor-nosotras{
+        @include flex;
+        align-items: center;
+        justify-content: center;
+        img{
+        width: 90%;
+        align-items: center;
+        border-radius: 10px;
+        }
+        p{
+        text-align: center;
+        margin: 1.5rem;
+        span{
+            display: block;
+            margin-top: 1rem;
+        }
+        }
+    }
+  
+ /*estilos tienda mobile*/
+
+ .productos{
+    h1{
+        @include titulos;
+        display: block;
+        margin: 2rem;
+        span{
+            display: block;
+        }
+    }
+    .herramientas{
+        @include grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat (3, 1fr);
+        row-gap: 2rem;
+        margin-bottom: 2rem;
+        img{
+            width: 100%;
+        }
+        h2{
+            font-size: 18px;
+            margin: 1rem;
+        }
+        p{
+            text-align: left;
+            margin: 1rem;
+            font-size: 15px;
+            span{
+                display: block;
+            }
+        }
+        .boton-carrito{
+            background-color:orange;
+            display: inline-block;
+            border-radius: 15px;
+            padding: 8px;
+            a{
+                text-decoration: none;
+                color: aliceblue;
+                font-size: 14px;
+            }
+            
+        }
+    }
+    }
+
+  /*estilos datos mobile*/
+    
+
+    .titulo-datos{
+        @include titulos;
+        margin-bottom: 3rem;
+
+    }
+    .datos-perrunos{
+        @include flex;
+        align-items: center;
+        justify-content: center;
+        img{
+        width: 90%;
+        margin: 1rem;
+        border-radius: 10px;
+        
+        }
+        h3{
+        text-align: center;
+        }
+        p{
+        text-align: justify;
+        margin: 1.5rem;
+        span{
+            display: block;
+        }
+        }
+    }   
+
+
+
+
 @media screen and (min-width:768px){
+
+
+    /*estilos home tablet*/
+
     
     .menu-uno{
-       text-align: center;
+        text-align: center;
         .boton-index{
         width: 30%;
         text-align: center;
         display: inline-block;
-        margin-bottom: 1.5rem;
+        margin-bottom: 6rem;
+        &:hover {
+            background-color: rgb(236, 122, 46);
+         } 
+
         }
     }
     .menu-dos{
+         @include grid;
+        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-rows: repeat(1, 60%);
+        p{
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+                        
+    }
+    
+    /*estilos agenda tablet*/
+    .item-agenda{
+        h1{
+            display: inline-block;
+        }
+        .mantencion, .premium{
+            @include flex;
+            flex-direction: column;
+            h2{
+                text-align: center;
+                display: block;
+                margin: 1rem;
+            }
+            img{
+                margin: auto;
+                width: 70%;
+            }
+            p{
+                
+                margin-left: 5rem;
+                margin-right: 5rem;
+                text-align: left;
+            }
+            .form-select{
+                margin: auto;
+                width: 50%;
+                display: inline-block;
+            }
+            .boton-hora{
+                text-align: center;
+                width: 15%;
+                margin: auto;
+                margin-top: 1rem;
+                margin-bottom: 3rem;
+                &:hover {
+                    background-color: rgb(236, 122, 46);
+                 } 
+            }
+        }
+        
+    }
+    /*estilos tienda tablet*/
+    .productos{
+        h1{
+            @include titulos;
+            display: block;
+            margin-bottom: 3rem;
+            
+            
+        }
+        .herramientas{
+            @include grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat (4, 50%);
+            row-gap: 2rem;
+            column-gap: 2rem;
+            margin-bottom: 2rem;
+            img{
+                width: 70%;
+                margin: auto;
+            }
+            h2{
+                font-size: 18px;
+                margin: 1rem;
+            }
+            p{
+                text-align: left;
+                margin: 1rem;
+                font-size: 15px;
+                span{
+                    display: block;
+                }
+            }
+        }        
+        
+    }
+    /*estilos datos tablet*/
+    .datos-perrunos{
         @include grid;
-        grid-template-columns: 1fr 1fr ;
-        grid-template-rows: repeat(1, 40%);
-         padding: 6rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat (2, 50%)        
+
+    }
+    /*estilos quien soy tablet*/
+    .contenedor-nosotras{
+        @include grid;
+        grid-template-columns: 1fr 0.8fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        
+        img{
+            width: 90%;
+            margin-left: 2rem;
+            margin: auto;
+            margin-bottom: 5rem;
+
+        }
+        p{
+           text-align: justify;
+           margin-right: 2rem;
+           
+        }
+
+    }
+ 
+  
+   
+
+
+@media screen and (min-width:1024px){
+
+
+            
+    .menu-uno{
+        .boton-index{
+            width: 20%;
+            font-size: large;
+            &:hover {
+                background-color: rgb(236, 122, 46);
+             } 
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+    
+   
+    .item-agenda{
+        @include flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        .mantencion, .premium{
+        width: 50%;
+            
+            img{
+            width: 80%;
+            display: inline-block;
+            }
+            .foto-premium{
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    .productos{
+        .titulo-tienda{
+            display: inline-block;
+            width: 100%;
+            span{
+                display: inline-block;
+                
+            }
+        }
+        .herramientas{
+            @include grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(2,50%);
+            grid-row: auto;
+            margin-bottom: 5rem;
+            
+            .producto-1, .producto-2, .producto-3, .producto-4, .producto-5, .producto-6, .producto-7, .producto-8{
+                margin: auto;
+                width: 260px;
+              
+            }
             
         }
     }
     
-
-@media screen and (min-width:1024px){
-    
-   
-    .menu-uno{
-       display: inline-block;
-
-        .boton-index{
-            width: 20%;
-            margin-bottom: 7rem;
+   .contenedor-nosotras{
+        img{
+            width: 60%;
         }
-    }
-    .menu-dos{
-        @include grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(1, 40%);
+        p{
+            margin-right: 5rem;
+        }
+   }
 
-    }
-    }
 
-}
+ }     
+  
+
+ }}  
+    
+
+
 
 footer{
     background-color: orange;
     color: nth($list-color, 2 );
     padding: 15px;
-    display: grid;
-    justify-content: center;
-    a img{
-        height: 25px;
-        width: 25px;
-        justify-content: center;
-        display: flex;
+    margin-top: 4rem;
+
+    .pie-pagina{
+        @include grid;
+        grid-template-columns: 2fr 0.2fr;
+        grid-template-rows: 1;
+        a img{
+            height: 30px;
+            width: 30px;
+            align-items: right;
+        }
+        p{
+            font-size: 14px ;
+            font-weight: lighter;
+            text-align: left;
+        }
     }
-    p{
-        font-size: 14px ;
-        font-family: "Poppins", sans-serif;
-        font-weight: lighter;
-        text-align: center;
+   
+@media screen and (min-width:768px){
+
+    grid-template-columns: 2fr 0.1fr;
+    grid-template-rows: 1;
+    margin-top: 1rem;
+    .pie-pagina{
+        p{
+            text-align: center;
+        }
     }
+
+ }    
 
 @media screen and (min-width:1024px){
    
@@ -164,7 +537,7 @@ footer{
         margin: auto;
         text-align: right;
     }
-}
-
+    }
+ 
 }
 

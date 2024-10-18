@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #FFFFFF;
+  background-color: #F8F9FA;
 }
 
 /*estilos header*/
@@ -17,23 +17,32 @@ header {
   color: rgb(105, 104, 103);
 }
 header .boton-logo {
-  padding: 0.3rem;
+  margin: 0.5rem;
+}
+header .menu-cabeza {
+  margin-bottom: 0.3rem;
+  margin-top: 0.3rem;
 }
 header nav ul li {
   display: inline-block;
-  padding: 0.4rem;
+  padding: 0.7rem;
 }
 header nav ul li a {
-  color: #DF9527;
+  color: orange;
   text-decoration: none;
-  letter-spacing: 1px;
+  letter-spacing: 0.2rem;
 }
 
+/*estilos home mobile*/
 main {
   display: grid;
   font-family: "Poppins", sans-serif;
   grid-template-columns: 1fr;
   grid-template-rows: repeat 3, 1fr;
+  /*estilos agenda mobile*/
+  /*estilos quien somos mobile*/
+  /*estilos tienda mobile*/
+  /*estilos datos mobile*/
 }
 main .menu-principal {
   display: flex;
@@ -46,25 +55,33 @@ main .menu-uno {
 main .menu-uno img {
   width: 100%;
 }
-main .menu-uno h1 {
-  padding-top: 0.5rem;
-}
-main .menu-uno h1 span {
-  display: block;
-}
-main .menu-uno p {
+main h1 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-align: center;
   padding: 1rem;
 }
-main .menu-uno .boton-index {
+main h1 span {
+  display: block;
+}
+main p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+main .boton-index {
   display: inline-block;
-  background-color: #DF9527;
+  background-color: orange;
   padding: 0.8rem;
   text-align: center;
   width: 50%;
   margin: 1rem;
   border-radius: 15px;
 }
-main .menu-uno .boton-index a {
+main .boton-index:hover {
+  background-color: rgb(236, 122, 46);
+}
+main .boton-index a {
   text-decoration: none;
   color: aliceblue;
 }
@@ -74,15 +91,26 @@ main .menu-dos {
   justify-content: center;
   row-gap: 1rem;
   text-align: center;
+  margin-top: 1rem;
 }
 main .menu-dos img {
   width: 70%;
   margin: 2rem;
   align-items: center;
+  border-radius: 10px;
+}
+main .menu-dos h2 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-align: center;
 }
 main .menu-dos p {
-  padding: 0.5rem;
+  margin: 1.2rem;
   text-align: center;
+}
+main .menu-dos p span {
+  display: block;
 }
 main .menu-dos a {
   text-decoration: none;
@@ -92,7 +120,161 @@ main .menu-dos a {
   padding: 0.5rem;
   margin: 0 auto;
 }
+main .item-agenda {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+main .item-agenda h1 {
+  display: inline-block;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-align: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+main .item-agenda img {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+main .item-agenda .boton-hora {
+  background-color: orange;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: inline-block;
+  border-radius: 15px;
+  justify-content: center;
+}
+main .item-agenda .boton-hora a {
+  color: aliceblue;
+  text-decoration: none;
+}
+main .item-agenda .boton-hora:hover {
+  background-color: rgb(236, 122, 46);
+}
+main .item-agenda h2 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-align: center;
+  text-align: center;
+}
+main .item-agenda p {
+  text-align: left;
+  margin: 1rem;
+}
+main .item-agenda p span {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+}
+main .titulo-somos {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-align: center;
+  margin: 2rem;
+}
+main .contenedor-nosotras {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+main .contenedor-nosotras img {
+  width: 90%;
+  align-items: center;
+  border-radius: 10px;
+}
+main .contenedor-nosotras p {
+  text-align: center;
+  margin: 1.5rem;
+}
+main .contenedor-nosotras p span {
+  display: block;
+  margin-top: 1rem;
+}
+main .productos h1 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-align: center;
+  display: block;
+  margin: 2rem;
+}
+main .productos h1 span {
+  display: block;
+}
+main .productos .herramientas {
+  display: grid;
+  font-family: "Poppins", sans-serif;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat 3, 1fr;
+  row-gap: 2rem;
+  margin-bottom: 2rem;
+}
+main .productos .herramientas img {
+  width: 100%;
+}
+main .productos .herramientas h2 {
+  font-size: 18px;
+  margin: 1rem;
+}
+main .productos .herramientas p {
+  text-align: left;
+  margin: 1rem;
+  font-size: 15px;
+}
+main .productos .herramientas p span {
+  display: block;
+}
+main .productos .herramientas .boton-carrito {
+  background-color: orange;
+  display: inline-block;
+  border-radius: 15px;
+  padding: 8px;
+}
+main .productos .herramientas .boton-carrito a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 14px;
+}
+main .titulo-datos {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+main .datos-perrunos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+main .datos-perrunos img {
+  width: 90%;
+  margin: 1rem;
+  border-radius: 10px;
+}
+main .datos-perrunos h3 {
+  text-align: center;
+}
+main .datos-perrunos p {
+  text-align: justify;
+  margin: 1.5rem;
+}
+main .datos-perrunos p span {
+  display: block;
+}
 @media screen and (min-width: 768px) {
+  
   main .menu-uno {
     text-align: center;
   }
@@ -100,29 +282,167 @@ main .menu-dos a {
     width: 30%;
     text-align: center;
     display: inline-block;
-    margin-bottom: 1.5rem;
+    margin-bottom: 6rem;
+  }
+  main .menu-uno .boton-index:hover {
+    background-color: rgb(236, 122, 46);
   }
   main .menu-dos {
     display: grid;
     font-family: "Poppins", sans-serif;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(1, 40%);
-    padding: 6rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 60%);
   }
-}
-@media screen and (min-width: 1024px) {
-  main .menu-uno {
+  main .menu-dos p {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  main .item-agenda h1 {
     display: inline-block;
   }
-  main .menu-uno .boton-index {
-    width: 20%;
-    margin-bottom: 7rem;
+  main .item-agenda .mantencion, main .item-agenda .premium {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
-  main .menu-dos {
+  main .item-agenda .mantencion h2, main .item-agenda .premium h2 {
+    text-align: center;
+    display: block;
+    margin: 1rem;
+  }
+  main .item-agenda .mantencion img, main .item-agenda .premium img {
+    margin: auto;
+    width: 70%;
+  }
+  main .item-agenda .mantencion p, main .item-agenda .premium p {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: left;
+  }
+  main .item-agenda .mantencion .form-select, main .item-agenda .premium .form-select {
+    margin: auto;
+    width: 50%;
+    display: inline-block;
+  }
+  main .item-agenda .mantencion .boton-hora, main .item-agenda .premium .boton-hora {
+    text-align: center;
+    width: 15%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+  main .item-agenda .mantencion .boton-hora:hover, main .item-agenda .premium .boton-hora:hover {
+    background-color: rgb(236, 122, 46);
+  }
+  main .productos h1 {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-align: center;
+    display: block;
+    margin-bottom: 3rem;
+  }
+  main .productos .herramientas {
     display: grid;
     font-family: "Poppins", sans-serif;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(1, 40%);
+    grid-template-rows: repeat 4, 50%;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  main .productos .herramientas img {
+    width: 70%;
+    margin: auto;
+  }
+  main .productos .herramientas h2 {
+    font-size: 18px;
+    margin: 1rem;
+  }
+  main .productos .herramientas p {
+    text-align: left;
+    margin: 1rem;
+    font-size: 15px;
+  }
+  main .productos .herramientas p span {
+    display: block;
+  }
+  main .datos-perrunos {
+    display: grid;
+    font-family: "Poppins", sans-serif;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat 2, 50%;
+  }
+  main .contenedor-nosotras {
+    display: grid;
+    font-family: "Poppins", sans-serif;
+    grid-template-columns: 1fr 0.8fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+  }
+  main .contenedor-nosotras img {
+    width: 90%;
+    margin-left: 2rem;
+    margin: auto;
+    margin-bottom: 5rem;
+  }
+  main .contenedor-nosotras p {
+    text-align: justify;
+    margin-right: 2rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  main .menu-uno .boton-index {
+    width: 20%;
+    font-size: large;
+  }
+  main .menu-uno .boton-index:hover {
+    background-color: rgb(236, 122, 46);
+  }
+  main .menu-uno p {
+    font-size: 20px;
+  }
+  main .item-agenda {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  main .item-agenda .mantencion, main .item-agenda .premium {
+    width: 50%;
+  }
+  main .item-agenda .mantencion img, main .item-agenda .premium img {
+    width: 80%;
+    display: inline-block;
+  }
+  main .item-agenda .mantencion .foto-premium, main .item-agenda .premium .foto-premium {
+    margin-top: 3rem;
+  }
+  main .productos .titulo-tienda {
+    display: inline-block;
+    width: 100%;
+  }
+  main .productos .titulo-tienda span {
+    display: inline-block;
+  }
+  main .productos .herramientas {
+    display: grid;
+    font-family: "Poppins", sans-serif;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 50%);
+    grid-row: auto;
+    margin-bottom: 5rem;
+  }
+  main .productos .herramientas .producto-1, main .productos .herramientas .producto-2, main .productos .herramientas .producto-3, main .productos .herramientas .producto-4, main .productos .herramientas .producto-5, main .productos .herramientas .producto-6, main .productos .herramientas .producto-7, main .productos .herramientas .producto-8 {
+    margin: auto;
+    width: 260px;
+  }
+  main .contenedor-nosotras img {
+    width: 60%;
+  }
+  main .contenedor-nosotras p {
+    margin-right: 5rem;
   }
 }
 
@@ -130,20 +450,33 @@ footer {
   background-color: orange;
   color: aliceblue;
   padding: 15px;
+  margin-top: 4rem;
+}
+footer .pie-pagina {
   display: grid;
-  justify-content: center;
-}
-footer a img {
-  height: 25px;
-  width: 25px;
-  justify-content: center;
-  display: flex;
-}
-footer p {
-  font-size: 14px;
   font-family: "Poppins", sans-serif;
+  grid-template-columns: 2fr 0.2fr;
+  grid-template-rows: 1;
+}
+footer .pie-pagina a img {
+  height: 30px;
+  width: 30px;
+  align-items: right;
+}
+footer .pie-pagina p {
+  font-size: 14px;
   font-weight: lighter;
-  text-align: center;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    grid-template-columns: 2fr 0.1fr;
+    grid-template-rows: 1;
+    margin-top: 1rem;
+  }
+  footer .pie-pagina p {
+    text-align: center;
+  }
 }
 @media screen and (min-width: 1024px) {
   footer img {
